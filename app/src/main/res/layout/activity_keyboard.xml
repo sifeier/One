@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.one.activity.KeyboardActivity">
+
+    <TextView
+        android:text="soft keyboard height test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/input_et"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:minHeight="44dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        />
+
+    <TextView
+        android:id="@+id/clear_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:gravity="center"
+        android:layout_toRightOf="@id/input_et"
+        android:layout_alignParentBottom="true"
+        android:text="clear"
+        android:textSize="18dp"
+        />
+
+    <ImageView
+        android:id="@+id/divider_iv"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_marginTop="5dp"
+        android:paddingBottom="10dp"
+        android:layout_below="@id/input_et"
+        android:background="#222222"
+        android:windowSoftInputMode="adjustPan"
+        />
+
+    <ImageView
+        android:id="@+id/dash_place"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/divider_iv"
+        android:background="#555555"
+        android:scaleType="center"
+        src="@drawable/house_main"
+        />
+
+</RelativeLayout>

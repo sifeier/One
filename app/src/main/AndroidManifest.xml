@@ -10,7 +10,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/lauch_cup"
+        android:icon="@drawable/baby_feet"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
@@ -26,8 +26,30 @@
             android:name=".activity.ScreenLockActivity"
             android:label="@string/title_activity_screen_lock" >
         </activity>
-
+        <activity
+            android:name=".activity.FrameLayoutActivity"
+            android:label="FrameLayoutActivity" >
+        </activity>
+        <activity
+            android:name=".circle.CircleActivity"
+            android:label="CircleActivity" >
+        </activity>
+        <activity
+            android:name=".activity.KeyboardActivity"
+            android:label="@string/title_activity_keyboard" >
+        </activity>
+        <activity
+            android:name=".panel.PanelActivity"
+            android:label="@string/title_activity_panel" >
+        </activity>
+        <activity
+            android:name=".panel.TestGesture"
+            android:label="TestGesture" >
+        </activity>
+        <activity
+            android:name=".widget.TripleTapActivity"
+            android:label="@string/title_activity_triple_tap" >
+        </activity>
     </application>
-
 
 </manifest>

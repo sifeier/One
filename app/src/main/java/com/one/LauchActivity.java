@@ -14,8 +14,13 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 
+import com.one.activity.FrameLayoutActivity;
+import com.one.activity.KeyboardActivity;
 import com.one.activity.ScreenLockActivity;
-
+import com.one.circle.CircleActivity;
+import com.one.panel.PanelActivity;
+import com.one.panel.TestGesture;
+import com.one.widget.TripleTapActivity;
 
 
 public class LauchActivity extends ActionBarActivity {
@@ -66,20 +71,67 @@ public class LauchActivity extends ActionBarActivity {
             View rootView = inflater.inflate(R.layout.fragment_lauch, container, false);
             Button screenLock = (Button) rootView.findViewById(R.id.screenlock_btn);
             screenLock.setOnClickListener(mOnClickListener);
+
+            Button framell = (Button) rootView.findViewById(R.id.framell_tv);
+            framell.setOnClickListener(mFrameBtnListener);
+
+            Button circle = (Button) rootView.findViewById(R.id.circle_btn);
+            circle.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(mContext, CircleActivity.class);
+                    startActivity(intent);
+                }
+            });
+
+            Button softkeyboard = (Button) rootView.findViewById(R.id.softkeyboard_btn);
+            softkeyboard.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(mContext, KeyboardActivity.class);
+                    startActivity(intent);
+                }
+            });
+
+            Button panel = (Button) rootView.findViewById(R.id.panel_btn);
+            panel.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent =  new Intent(mContext, TestGesture.class);
+                    startActivity(intent);
+                }
+            });
+
+
+            Button triple = (Button) rootView.findViewById(R.id.triple);
+            triple.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(mContext, TripleTapActivity.class);
+                    startActivity(intent);
+                }
+            });
+
             return rootView;
         }
 
         final View.OnClickListener mOnClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                lauchScreenLockActivity();
+                Intent intent = new Intent(mContext, ScreenLockActivity.class);
+                startActivity(intent);
             }
-
         };
-        private void lauchScreenLockActivity() {
-            Intent intent = new Intent(mContext, ScreenLockActivity.class);
-            startActivity(intent);
-        }
+
+        final View.OnClickListener mFrameBtnListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mContext, FrameLayoutActivity.class);
+                startActivity(intent);
+            }
+        };
+
+
     }
 
 }

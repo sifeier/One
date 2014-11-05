@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:circle_progress="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    >
+    
+    <!-- 使用自定义的组合控件ProgressCircle -->
+    <com.one.circle.CircleProgress
+        android:id="@+id/test_progress_circle"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        circle_progress:iprogress="0"
+        circle_progress:imax="100"
+        circle_progress:iforeground="@drawable/foreground"
+        circle_progress:ibackground="@drawable/background"
+        circle_progress:itextSize="14sp"
+         />
+    
+    <Button 
+        android:id="@+id/add_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add"
+        android:layout_margin="20dp"/>
+</LinearLayout>

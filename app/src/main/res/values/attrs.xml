@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircleProgress">
+        <attr name="iforeground" format="reference|color" />
+        <attr name="ibackground" format="reference|color" />
+        <attr name="iprogress" format="integer" />
+        <attr name="imax" format="integer" />
+        <attr name="itextSize" format="dimension" />
+    </declare-styleable>
+
+</resources>
