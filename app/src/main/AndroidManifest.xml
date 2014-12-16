@@ -39,8 +39,8 @@
             android:label="@string/title_activity_keyboard" >
         </activity>
         <activity
-            android:name=".panel.PanelActivity"
-            android:label="@string/title_activity_panel" >
+            android:name="com.sample.fragment.FragmentTestActivity"
+            android:label="FragmentTest" >
         </activity>
         <activity
             android:name=".panel.TestGesture"
@@ -50,6 +50,23 @@
             android:name=".widget.TripleTapActivity"
             android:label="@string/title_activity_triple_tap" >
         </activity>
+        <activity
+            android:name=".widget.HorizontalActivity"
+            android:label="@string/title_activity_horizontal" >
+        </activity>
+        <activity
+            android:name="com.sample.UI.actionbar.ActionBarShareActivity"
+            android:label="ActionBarStyledActivity" >
+        </activity>
+        <activity
+            android:name="com.sample.animation.ListFlipper"
+            android:label="@string/title_activity_list_flipper" >
+        </activity>
+        <activity
+            android:name=".anim.AnimActivity"
+            android:label="AnimActivity" >
+        </activity>
+
     </application>
 
 </manifest>

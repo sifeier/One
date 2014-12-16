@@ -62,4 +62,32 @@
         android:text="triple"
         />
 
+    <Button
+        android:id="@+id/horizontal_sv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="horizontal sv"
+        />
+
+    <Button
+        android:id="@+id/fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="fragment"
+        />
+
+    <Button
+        android:id="@+id/actionbar_base"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="actionbar base"
+        />
+
+    <Button
+        android:id="@+id/drag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="drag down"
+        />
+
 </LinearLayout>

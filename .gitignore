@@ -5,5 +5,6 @@
 /build
 .idea
 apk/
+apk
 .gitignore
 

@@ -10,5 +10,27 @@
     <string name="title_activity_keyboard">KeyboardActivity</string>
     <string name="title_activity_panel">PanelActivity</string>
     <string name="title_activity_triple_tap">TripleTapActivity</string>
+    <string name="title_activity_horizontal">HorizontalActivity</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="intro_message">
+<![CDATA[
+
+
+	    This sample demonstrates how to start a transition right after a fragment transaction.
+
+
+        ]]>
+    </string>
+    <!-- fragment -->
+    <string name="sample_show_log">Show Log</string>
+    <string name="sample_hide_log">Hide Log</string>
+    <string name="menu_location">menu location</string>
+    <string name="menu_refresh">menu refresh</string>
+    <string name="menu_share">Share</string>
+    <string name="quote_1">Expectation is the root of all heartache - William Shakespeare</string>
+    <string name="quote_2">The true sign of intelligence is not knowledge but imagination - Albert
+        Einstein</string>
+    <string name="quote_3">As for me, all I know is that I know nothing - Socrates</string>
+    <string name="title_activity_list_flipper">ListFlipper</string>
 
 </resources>

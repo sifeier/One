@@ -17,10 +17,15 @@ import android.widget.Button;
 import com.one.activity.FrameLayoutActivity;
 import com.one.activity.KeyboardActivity;
 import com.one.activity.ScreenLockActivity;
+import com.one.anim.AnimActivity;
 import com.one.circle.CircleActivity;
-import com.one.panel.PanelActivity;
 import com.one.panel.TestGesture;
+import com.one.widget.HorizontalActivity;
 import com.one.widget.TripleTapActivity;
+import com.sample.UI.actionbar.ActionBarBaseActivity;
+import com.sample.UI.actionbar.ActionBarShareActivity;
+import com.sample.UI.actionbar.ActionBarStyledActivity;
+import com.sample.fragment.FragmentTestActivity;
 
 
 public class LauchActivity extends ActionBarActivity {
@@ -70,10 +75,22 @@ public class LauchActivity extends ActionBarActivity {
                 Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_lauch, container, false);
             Button screenLock = (Button) rootView.findViewById(R.id.screenlock_btn);
-            screenLock.setOnClickListener(mOnClickListener);
+            screenLock.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(mContext, ScreenLockActivity.class);
+                    startActivity(intent);
+                }
+            });
 
             Button framell = (Button) rootView.findViewById(R.id.framell_tv);
-            framell.setOnClickListener(mFrameBtnListener);
+            framell.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(mContext, FrameLayoutActivity.class);
+                    startActivity(intent);
+                }
+            });
 
             Button circle = (Button) rootView.findViewById(R.id.circle_btn);
             circle.setOnClickListener(new View.OnClickListener() {
@@ -102,7 +119,6 @@ public class LauchActivity extends ActionBarActivity {
                 }
             });
 
-
             Button triple = (Button) rootView.findViewById(R.id.triple);
             triple.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -112,24 +128,45 @@ public class LauchActivity extends ActionBarActivity {
                 }
             });
 
+            Button hScrollView = (Button) rootView.findViewById(R.id.horizontal_sv);
+            hScrollView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent  =  new Intent(mContext, HorizontalActivity.class);
+                    startActivity(intent);
+                }
+            });
+
+            Button fragment = (Button)rootView.findViewById(R.id.fragment);
+            fragment.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent  = new Intent(mContext, FragmentTestActivity.class);
+                    startActivity(intent);
+                }
+            });
+
+            Button actionb = (Button)rootView.findViewById(R.id.actionbar_base);
+            actionb.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent =  new Intent(mContext, ActionBarShareActivity.class);
+                    startActivity(intent);
+                }
+            });
+
+            Button drag = (Button)rootView.findViewById(R.id.drag);
+            drag.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(mContext, AnimActivity.class);
+                    startActivity(intent);
+                }
+            });
+
             return rootView;
         }
 
-        final View.OnClickListener mOnClickListener = new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(mContext, ScreenLockActivity.class);
-                startActivity(intent);
-            }
-        };
-
-        final View.OnClickListener mFrameBtnListener = new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(mContext, FrameLayoutActivity.class);
-                startActivity(intent);
-            }
-        };
 
 
     }
