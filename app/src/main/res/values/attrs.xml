@@ -8,4 +8,10 @@
         <attr name="itextSize" format="dimension" />
     </declare-styleable>
 
+    <declare-styleable name="DragView">
+        <attr
+            name="max_drag_height"
+            format="dimension" />
+    </declare-styleable>
+
 </resources>

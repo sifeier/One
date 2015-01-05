@@ -2,8 +2,11 @@ package com.one.anim;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 
 import com.one.R;
 
@@ -18,6 +21,11 @@ public class AnimActivity extends Activity {
     private DragDownLayout dragDownLayout;
 
     private ListView lv;
+
+    private ImageView mDragLogoImageV;
+    private int mImageViewHeight;
+    private int mImageViewWidth;
+    private int mDynimacHeight = 0;
 
     private static List<String> ss =  new ArrayList<String>(20);
 
@@ -46,6 +54,7 @@ public class AnimActivity extends Activity {
         setContentView(R.layout.anim_activity);
         initViews();
         initData();
+        initLogoImageView();
     }
 
     private void initData() {
@@ -66,8 +75,26 @@ public class AnimActivity extends Activity {
             }
 
             @Override
-            public void onDrag(int draged, int deltaY) {
-
+            public void onDrag(int draged, int maxHeight) {
+                int dis = Math.abs(draged);
+                 int alpha = dis * 255 / maxHeight;
+                int progress = dis * 100 / maxHeight;
+                //调整Alpha
+                mDragLogoImageV.setAlpha(alpha>255 ? 255 : alpha);
+                //调整Scale
+                float scaleF = (float) progress / 100;
+                if(scaleF > 1){
+                    scaleF = (float) 1.0;
+                }
+                setScale(scaleF);
+                //调整Margin
+                RelativeLayout.LayoutParams layoutParams = (android.widget.RelativeLayout.LayoutParams) mDragLogoImageV
+                        .getLayoutParams();
+                int viewHeight = getHeight(mDragLogoImageV);
+                int margin = (dis - viewHeight) >> 1;
+                layoutParams.topMargin = margin;
+                mDragLogoImageV.setLayoutParams(layoutParams);
+                Log.e("AnimActivity", " alpha: " + alpha + " scale: " + scaleF + " margin" + margin);
             }
 
             @Override
@@ -76,6 +103,37 @@ public class AnimActivity extends Activity {
             }
         });
 
+    }
+
+    private void initLogoImageView() {
+        mDragLogoImageV = (ImageView) findViewById(R.id.drag_logo_iv);
+        mDragLogoImageV.setAlpha(0);
+        setScale(0.1f);
+        mImageViewHeight = getHeight(mDragLogoImageV);
+        mImageViewWidth = getWidth(mDragLogoImageV);
+    }
+
+    private int getHeight(View view) {
+        int w = View.MeasureSpec.makeMeasureSpec(0,
+                View.MeasureSpec.UNSPECIFIED);
+        int h = View.MeasureSpec.makeMeasureSpec(0,
+                View.MeasureSpec.UNSPECIFIED);
+        view.measure(w, h);
+        return (view.getMeasuredHeight());
+    }
+
+    private int getWidth(View view) {
+        int w = View.MeasureSpec.makeMeasureSpec(0,
+                View.MeasureSpec.UNSPECIFIED);
+        int h = View.MeasureSpec.makeMeasureSpec(0,
+                View.MeasureSpec.UNSPECIFIED);
+        view.measure(w, h);
+        return (view.getMeasuredWidth());
+    }
+
+    private void setScale(float scale) {
+        mDragLogoImageV.setScaleX(scale);
+        mDragLogoImageV.setScaleX(scale);
     }
 
     @Override

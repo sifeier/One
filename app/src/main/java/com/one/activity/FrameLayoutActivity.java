@@ -8,6 +8,9 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.TranslateAnimation;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -23,6 +26,7 @@ public class FrameLayoutActivity extends Activity {
     Resources res;
     Bitmap bg;
     Bitmap up;
+    Button click;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -31,6 +35,7 @@ public class FrameLayoutActivity extends Activity {
         res = getResources();
         setContentView(R.layout.activity_center_circle_rl);
         initBitmap();
+        click = (Button) findViewById(R.id.click);
         avatar = (ImageView) findViewById(R.id.userAvatar);
         initClick();
     }
@@ -52,5 +57,20 @@ public class FrameLayoutActivity extends Activity {
                 return false;
             }
         });
+
+        click.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                avatar.setVisibility(View.GONE);
+                Animation up = new TranslateAnimation(Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF, 0.0f,
+                        Animation.RELATIVE_TO_PARENT, 1.0f, Animation.RELATIVE_TO_SELF, 0.0f);
+                up.setFillAfter(true);
+                up.setDuration(1000);
+                up.start();
+                avatar.setAnimation(up);
+                avatar.setVisibility(View.VISIBLE);
+            }
+        });
+
     }
 }

@@ -1,17 +1,22 @@
 package com.one;
 
+import android.graphics.Color;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.content.Context;
 import android.content.Intent;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.style.ForegroundColorSpan;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 
 import com.one.activity.FrameLayoutActivity;
@@ -74,6 +79,10 @@ public class LauchActivity extends ActionBarActivity {
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                 Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_lauch, container, false);
+
+            initTextColor(rootView);
+
+
             Button screenLock = (Button) rootView.findViewById(R.id.screenlock_btn);
             screenLock.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -168,6 +177,20 @@ public class LauchActivity extends ActionBarActivity {
         }
 
 
+        private  void initTextColor(View root) {
+            try {
+                TextView textView = (TextView) root.findViewById(R.id.welcom_msg_tv);
+                Spannable sp = new SpannableString("欢迎布可啊");
+                sp.setSpan(new ForegroundColorSpan(Color.parseColor("#222222")), 2,4, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                textView.append(sp);
+                sp = new SpannableString("再次欢迎布可啊");
+                sp.setSpan(new ForegroundColorSpan(Color.parseColor("#333333")), 4,6, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                textView.append("\n");
+                textView.append(sp);
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        }
 
     }
 

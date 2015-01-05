@@ -3,22 +3,30 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#000000"
     >
 
-    <ImageView
-        android:id="@+id/front_lv"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:scaleType="centerInside"
-        android:background="#D00000"
-        android:src="@drawable/house_main"
-        />
+        android:layout_height="208dp" >
+
+        <ImageView
+            android:id="@+id/drag_logo_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/fast_burn_icon"
+            />
+    </RelativeLayout>
 
     <com.one.anim.DragDownLayout
+        xmlns:dv="http://schemas.android.com/apk/res-auto"
         android:id="@+id/anim_dragdown_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        dv:max_drag_height="208dip"
+        >
 
         <ListView
             android:id="@+id/number_lv"

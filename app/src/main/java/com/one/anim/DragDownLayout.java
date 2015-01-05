@@ -1,12 +1,15 @@
 package com.one.anim;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.support.v4.view.MotionEventCompat;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.ViewConfiguration;
 import android.widget.FrameLayout;
 import android.widget.Scroller;
+
+import com.one.R;
 
 /**
  * Created by shadow.ly on 2014/11/18.
@@ -16,7 +19,7 @@ public class DragDownLayout extends FrameLayout {
 
     private int touchSlop;
     private int threshold = DEFAULT_THRESHOLD;
-    private static final int DEFAULT_THRESHOLD = 320;
+    private static final int DEFAULT_THRESHOLD = 3200;
 
     private Scroller scroller;
 
@@ -26,22 +29,30 @@ public class DragDownLayout extends FrameLayout {
 
     public DragDownLayout(Context context) {
         super(context);
-        init(context);
+        init(context,null);
     }
 
     public DragDownLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
-        init(context);
+        init(context,attrs);
     }
 
     public DragDownLayout(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-        init(context);
+        init(context,attrs);
     }
 
-    private void init(Context context) {
+    private void init(Context context, AttributeSet attrs) {
         touchSlop = ViewConfiguration.get(context).getScaledTouchSlop();
         scroller = new Scroller(context);
+
+        TypedArray a = context.obtainStyledAttributes(attrs,
+                R.styleable.DragView);
+        if (a.hasValue(R.styleable.DragView_max_drag_height)) {
+            threshold = a.getDimensionPixelSize(R.styleable.DragView_max_drag_height, DEFAULT_THRESHOLD);
+        }
+        a.recycle();
+        a = null;
     }
 
     private float downX, downY, lastY;
@@ -67,6 +78,10 @@ public class DragDownLayout extends FrameLayout {
                     intercept = true;
                 if(listener != null && listener.canChildScrollUp())
                     intercept = false;
+                int scrollY = getScrollY();
+                if(-scrollY > threshold){
+                    intercept = false;
+                }
                 break;
         }
         return intercept;
@@ -94,7 +109,7 @@ public class DragDownLayout extends FrameLayout {
                 moved += deltaY;
                 scrollBy(0, -deltaY/2); //下滑是手势下滑的1/2 防止滑的太快
                 if(listener != null)
-                    listener.onDrag(getScrollY(), deltaY);
+                    listener.onDrag(getScrollY(), threshold); //传参值改变未最大滑动值
                 break;
             case MotionEvent.ACTION_UP:
                 int scrollY = getScrollY();
@@ -125,6 +140,10 @@ public class DragDownLayout extends FrameLayout {
         int scrollY = getScrollY();
         scroller.startScroll(0, scrollY, 0, -scrollY, 1000);
     }
+    public void scrollToTop(){
+        int scrollY = getScrollY();
+        scroller.startScroll(0, scrollY, 0, -scrollY, 0);
+    }
 
     @Override
     public void computeScroll() {
@@ -140,18 +159,13 @@ public class DragDownLayout extends FrameLayout {
             }
         }
     }
-
-    private void setDragThreshold(int threshold) {
-        this.threshold = threshold;
-    }
-
     public void setOnDragListener(OnDragListener listener) {
         this.listener = listener;
     }
 
     public interface OnDragListener {
         public boolean canChildScrollUp();
-        public void onDrag(int draged, int deltaY);
+        public void onDrag(int draged, int maxHeight);
         public void onDismiss();
     }
 }

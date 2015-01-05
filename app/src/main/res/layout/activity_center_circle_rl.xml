@@ -37,6 +37,13 @@
         android:layout_gravity="center|center_vertical"
         android:gravity="center_vertical" >
 
+        <Button
+            android:id="@+id/click"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="click"
+            />
+
         <ImageView
             android:id="@+id/userAvatar"
             android:layout_width="120dp"
