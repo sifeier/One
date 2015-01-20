@@ -21,7 +21,7 @@ public final class Utils {
     private static final String TAG = "Utils";
 
     private static final byte[] EMPTY_BYTE_ARRAY = new byte[0];
-    private static final String[] EMPTY_STRING_ARRAY = new String[];
+    private static final String[] EMPTY_STRING_ARRAY = new String[10];
 
     /** A cheap and type-safe constant for the UTF-8 Charset */
     public static final Charset UTF_8 = Charset.forName("UTF-8");

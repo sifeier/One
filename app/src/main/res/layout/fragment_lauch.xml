@@ -1,102 +1,121 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:orientation="vertical"
-    tools:context=".LauchActivity$PlaceholderFragment">
+    android:scrollbars="vertical">
 
-    <TextView
-        android:id="@+id/hello_tv"
-        android:text="@string/hello_coffee"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:orientation="vertical"
+        tools:context=".LauchActivity$PlaceholderFragment">
 
-    <TextView
-        android:id="@+id/welcom_msg_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:textColor="#ff2fffff"
-        android:text="我是欢迎消息"
-        />
+        <TextView
+            android:id="@+id/hello_tv"
+            android:text="@string/hello_coffee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
-    <Button
-        android:id="@+id/screenlock_btn"
-        android:text="ScreenLock"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        />
+        <TextView
+            android:id="@+id/welcom_msg_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="#ff2fffff"
+            android:text="我是欢迎消息" />
 
-    <Button
-        android:id="@+id/framell_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:text="FrameLayout"
-        />
+        <Button
+            android:id="@+id/screenlock_btn"
+            android:text="ScreenLock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" />
 
-    <Button
-        android:id="@+id/circle_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:text="circle"
-        />
+        <Button
+            android:id="@+id/framell_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="FrameLayout" />
 
-    <Button
-        android:id="@+id/softkeyboard_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:text="softkeyboard"
-        />
+        <Button
+            android:id="@+id/circle_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="circle" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="panel"
-        android:textSize="18sp"
-        android:id="@+id/panel_btn"
-        />
+        <Button
+            android:id="@+id/softkeyboard_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="softkeyboard" />
 
-    <Button
-        android:id="@+id/triple"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="triple"
-        />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="panel"
+            android:textSize="18sp"
+            android:id="@+id/panel_btn" />
 
-    <Button
-        android:id="@+id/horizontal_sv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="horizontal sv"
-        />
+        <Button
+            android:id="@+id/triple"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="triple" />
 
-    <Button
-        android:id="@+id/fragment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="fragment"
-        />
+        <Button
+            android:id="@+id/horizontal_sv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="horizontal sv" />
 
-    <Button
-        android:id="@+id/actionbar_base"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="actionbar base"
-        />
+        <Button
+            android:id="@+id/fragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="fragment" />
 
-    <Button
-        android:id="@+id/drag"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="drag down"
-        />
+        <Button
+            android:id="@+id/actionbar_base"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="actionbar base" />
 
-</LinearLayout>
+        <Button
+            android:id="@+id/drag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="drag down" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="style ab"
+            android:onClick="onStyleABClick" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="blurImage"
+            android:onClick="onBlurImageClick"
+            />
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="gauss blur"
+            android:onClick="onGaussBlurClick"
+
+            />
+    </LinearLayout>
+
+</ScrollView>
+

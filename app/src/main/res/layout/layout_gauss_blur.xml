@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/main_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:scaleType="center"
+        android:src="@drawable/house_main"
+        />
+
+    <Button
+        android:id="@+id/btn_blur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="32dp"
+        android:layout_below="@id/main_iv"
+        android:text="blur"
+        android:onClick="onBlurImageClick"
+        />
+
+    <Button
+        android:id="@+id/btn_recover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="32dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/main_iv"
+        android:text="recover"
+        android:onClick="onRecoverImageClick"
+        />
+
+</RelativeLayout>

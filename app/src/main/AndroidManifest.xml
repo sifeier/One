@@ -67,6 +67,20 @@
             android:label="AnimActivity" >
         </activity>
 
+        <activity
+            android:name=".view.ActionBaStylerActivity"
+            android:label="actionbarstyle"></activity>
+
+        <activity
+            android:name=".view.BlurImageActivity"
+            android:label="blurimage" >
+        </activity>
+
+        <activity
+            android:name=".view.GaussBlurActivity"
+            android:label="gauss blur">
+        </activity>
+
     </application>
 
 </manifest>

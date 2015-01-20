@@ -1,12 +1,11 @@
 package com.one;
 
-import android.graphics.Color;
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
-import android.support.v4.app.Fragment;
-import android.os.Bundle;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBarActivity;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
@@ -15,9 +14,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
-
 
 import com.one.activity.FrameLayoutActivity;
 import com.one.activity.KeyboardActivity;
@@ -25,11 +22,12 @@ import com.one.activity.ScreenLockActivity;
 import com.one.anim.AnimActivity;
 import com.one.circle.CircleActivity;
 import com.one.panel.TestGesture;
+import com.one.view.ActionBaStylerActivity;
+import com.one.view.BlurImageActivity;
+import com.one.view.GaussBlurActivity;
 import com.one.widget.HorizontalActivity;
 import com.one.widget.TripleTapActivity;
-import com.sample.UI.actionbar.ActionBarBaseActivity;
 import com.sample.UI.actionbar.ActionBarShareActivity;
-import com.sample.UI.actionbar.ActionBarStyledActivity;
 import com.sample.fragment.FragmentTestActivity;
 
 
@@ -41,6 +39,7 @@ public class LauchActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         mContext = this;
         setContentView(R.layout.activity_lauch);
+
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.container, new PlaceholderFragment())
@@ -67,10 +66,26 @@ public class LauchActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    public void onStyleABClick(View v) {
+        Intent i = new Intent(mContext, ActionBaStylerActivity.class);
+        startActivity(i);
+    }
+
+    public void onBlurImageClick(View v) {
+        Intent i = new Intent(mContext, BlurImageActivity.class);
+        startActivity(i);
+    }
+
+    public void onGaussBlurClick(View v) {
+        Intent i = new Intent(mContext, GaussBlurActivity.class);
+        startActivity(i);
+    }
+
+
     /**
      * A placeholder fragment containing a simple view.
      */
-    public static class PlaceholderFragment extends Fragment {
+    public static class PlaceholderFragment extends Fragment implements View.OnClickListener{
 
         public PlaceholderFragment() {
         }
@@ -78,104 +93,15 @@ public class LauchActivity extends ActionBarActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                 Bundle savedInstanceState) {
+
             View rootView = inflater.inflate(R.layout.fragment_lauch, container, false);
+
+            initOnClick(rootView);
 
             initTextColor(rootView);
 
-
-            Button screenLock = (Button) rootView.findViewById(R.id.screenlock_btn);
-            screenLock.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(mContext, ScreenLockActivity.class);
-                    startActivity(intent);
-                }
-            });
-
-            Button framell = (Button) rootView.findViewById(R.id.framell_tv);
-            framell.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(mContext, FrameLayoutActivity.class);
-                    startActivity(intent);
-                }
-            });
-
-            Button circle = (Button) rootView.findViewById(R.id.circle_btn);
-            circle.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(mContext, CircleActivity.class);
-                    startActivity(intent);
-                }
-            });
-
-            Button softkeyboard = (Button) rootView.findViewById(R.id.softkeyboard_btn);
-            softkeyboard.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(mContext, KeyboardActivity.class);
-                    startActivity(intent);
-                }
-            });
-
-            Button panel = (Button) rootView.findViewById(R.id.panel_btn);
-            panel.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent =  new Intent(mContext, TestGesture.class);
-                    startActivity(intent);
-                }
-            });
-
-            Button triple = (Button) rootView.findViewById(R.id.triple);
-            triple.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(mContext, TripleTapActivity.class);
-                    startActivity(intent);
-                }
-            });
-
-            Button hScrollView = (Button) rootView.findViewById(R.id.horizontal_sv);
-            hScrollView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent  =  new Intent(mContext, HorizontalActivity.class);
-                    startActivity(intent);
-                }
-            });
-
-            Button fragment = (Button)rootView.findViewById(R.id.fragment);
-            fragment.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent  = new Intent(mContext, FragmentTestActivity.class);
-                    startActivity(intent);
-                }
-            });
-
-            Button actionb = (Button)rootView.findViewById(R.id.actionbar_base);
-            actionb.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent =  new Intent(mContext, ActionBarShareActivity.class);
-                    startActivity(intent);
-                }
-            });
-
-            Button drag = (Button)rootView.findViewById(R.id.drag);
-            drag.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(mContext, AnimActivity.class);
-                    startActivity(intent);
-                }
-            });
-
             return rootView;
         }
-
 
         private  void initTextColor(View root) {
             try {
@@ -192,6 +118,67 @@ public class LauchActivity extends ActionBarActivity {
             }
         }
 
+        private void initOnClick(View parent) {
+            parent.findViewById(R.id.screenlock_btn).setOnClickListener(this);
+            parent.findViewById(R.id.framell_tv).setOnClickListener(this);
+            parent.findViewById(R.id.circle_btn).setOnClickListener(this);
+            parent.findViewById(R.id.softkeyboard_btn).setOnClickListener(this);
+            parent.findViewById(R.id.panel_btn).setOnClickListener(this);
+            parent.findViewById(R.id.triple).setOnClickListener(this);
+            parent.findViewById(R.id.horizontal_sv).setOnClickListener(this);
+            parent.findViewById(R.id.fragment).setOnClickListener(this);
+            parent.findViewById(R.id.actionbar_base).setOnClickListener(this);
+            parent.findViewById(R.id.drag).setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View v) {
+            Intent intent;
+            switch (v.getId()) {
+                case R.id.screenlock_btn:
+                    intent = new Intent(mContext, ScreenLockActivity.class);
+                    startActivity(intent);
+                    break;
+                case R.id.framell_tv:
+                    intent = new Intent(mContext, FrameLayoutActivity.class);
+                    startActivity(intent);
+                    break;
+                case R.id.circle_btn:
+                    intent = new Intent(mContext, CircleActivity.class);
+                    startActivity(intent);
+                    break;
+                case R.id.softkeyboard_btn:
+                    intent = new Intent(mContext, KeyboardActivity.class);
+                    startActivity(intent);
+                    break;
+                case R.id.panel_btn:
+                    intent =  new Intent(mContext, TestGesture.class);
+                    startActivity(intent);
+                    break;
+                case R.id.triple:
+                    intent = new Intent(mContext, TripleTapActivity.class);
+                    startActivity(intent);
+                    break;
+                case R.id.horizontal_sv:
+                    intent  =  new Intent(mContext, HorizontalActivity.class);
+                    startActivity(intent);
+                    break;
+                case R.id.fragment:
+                    intent  = new Intent(mContext, FragmentTestActivity.class);
+                    startActivity(intent);
+                    break;
+                case R.id.actionbar_base:
+                    intent =  new Intent(mContext, ActionBarShareActivity.class);
+                    startActivity(intent);
+                    break;
+                case R.id.drag:
+                    intent = new Intent(mContext, AnimActivity.class);
+                    startActivity(intent);
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 
 }
