@@ -1,4 +1,4 @@
-package com.one.design;
+package com.one.design.singletion;
 
 /**
  * Lazy initialization, use class loader order

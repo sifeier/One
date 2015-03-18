@@ -1,4 +1,4 @@
-package com.one.design;
+package com.one.design.singletion;
 
 /**
  * Singleton Design Pattern: Double check locking

@@ -1,4 +1,4 @@
-package com.one.design;
+package com.one.design.singletion;
 
 /**
  * From Effective Java, Josh Bloch recommend
