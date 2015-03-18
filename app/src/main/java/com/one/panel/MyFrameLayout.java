@@ -28,24 +28,18 @@ public class MyFrameLayout extends FrameLayout {
     }
 
     public interface PanelTouchUpListener {
-        public boolean onTouchUP();
+        public boolean onTouchUp();
     }
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
-        Log.e("dispatchTouchEvent", "pos1 Action: " + ev.getAction());
-        if(gestureDetector.onTouchEvent(ev)) {
-            Log.e("dispatchTouchEvent", "pos2");
-            return true;
-        } else if(ev.getAction() == MotionEvent.ACTION_UP) {
-            Log.e("buke", "callback listener");
-            if(mPanelTouchUpListener != null) {
-                if(mPanelTouchUpListener.onTouchUP()) {
-                    return false;
-                }
-            }
+        if( gestureDetector != null  && !gestureDetector.onTouchEvent(ev) && (ev.getAction()==MotionEvent.ACTION_UP)){
         }
-        Log.e("dispatchTouchEvent", "pos3");
+        int action = ev.getAction();
+        if(action == MotionEvent.ACTION_UP && mPanelTouchUpListener != null) {
+            mPanelTouchUpListener.onTouchUp();
+        }
+
         return super.dispatchTouchEvent(ev);
     }
 }

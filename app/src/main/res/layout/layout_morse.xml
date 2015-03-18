@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/hanzi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:hint="hanzi"
+        android:minHeight="40dp"
+        />
+
+    <EditText
+        android:id="@+id/pinyin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hanzi"
+        android:hint="pinyin"
+        android:minHeight="40dp"
+        />
+
+    <EditText
+        android:id="@+id/morse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pinyin"
+        android:minHeight="40dp"
+        android:hint="morse"
+        />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/morse"
+            android:text="sensor"
+            />
+
+        </ScrollView>
+
+
+    <Button
+        android:id="@+id/to_letter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:text="To Pinyin"
+        android:onClick="toPinyinClick"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="To Morse"
+        android:onClick="toMorseClick"
+        />
+
+</RelativeLayout>

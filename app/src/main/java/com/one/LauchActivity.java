@@ -1,5 +1,6 @@
 package com.one;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
@@ -16,19 +17,23 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.demo.view.SpinnerActivity;
 import com.one.activity.FrameLayoutActivity;
 import com.one.activity.KeyboardActivity;
 import com.one.activity.ScreenLockActivity;
 import com.one.anim.AnimActivity;
+import com.one.app.OtherAppActivity;
 import com.one.circle.CircleActivity;
-import com.one.panel.TestGesture;
+import com.one.fun.MorseCodeActivity;
 import com.one.view.ActionBaStylerActivity;
 import com.one.view.BlurImageActivity;
 import com.one.view.GaussBlurActivity;
 import com.one.widget.HorizontalActivity;
 import com.one.widget.TripleTapActivity;
-import com.sample.UI.actionbar.ActionBarShareActivity;
-import com.sample.fragment.FragmentTestActivity;
+import com.demo.UI.actionbar.ActionBarShareActivity;
+import com.demo.fragment.FragmentTestActivity;
+
+import java.lang.ref.WeakReference;
 
 
 public class LauchActivity extends ActionBarActivity {
@@ -81,11 +86,26 @@ public class LauchActivity extends ActionBarActivity {
         startActivity(i);
     }
 
+    public void onMorseClick(View v) {
+        Intent i = new Intent(mContext, MorseCodeActivity.class);
+        startActivity(i);
+    }
+
+    public void onSpinnerClick(View v) {
+        Intent i = new Intent(mContext, SpinnerActivity.class);
+        startActivity(i);
+    }
+
+    public void onOtherAppClick(View v) {
+        Intent i = new Intent(mContext, OtherAppActivity.class);
+        startActivity(i);
+    }
 
     /**
      * A placeholder fragment containing a simple view.
      */
     public static class PlaceholderFragment extends Fragment implements View.OnClickListener{
+        private  WeakReference<Activity> activityWeakReference;
 
         public PlaceholderFragment() {
         }
@@ -93,7 +113,6 @@ public class LauchActivity extends ActionBarActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                 Bundle savedInstanceState) {
-
             View rootView = inflater.inflate(R.layout.fragment_lauch, container, false);
 
             initOnClick(rootView);
@@ -107,10 +126,10 @@ public class LauchActivity extends ActionBarActivity {
             try {
                 TextView textView = (TextView) root.findViewById(R.id.welcom_msg_tv);
                 Spannable sp = new SpannableString("欢迎布可啊");
-                sp.setSpan(new ForegroundColorSpan(Color.parseColor("#222222")), 2,4, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                sp.setSpan(new ForegroundColorSpan(Color.parseColor("#FFC0CB")), 2,4, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
                 textView.append(sp);
                 sp = new SpannableString("再次欢迎布可啊");
-                sp.setSpan(new ForegroundColorSpan(Color.parseColor("#333333")), 4,6, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                sp.setSpan(new ForegroundColorSpan(Color.parseColor("#F08080")), 4,6, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
                 textView.append("\n");
                 textView.append(sp);
             } catch (Exception ex) {
@@ -149,10 +168,6 @@ public class LauchActivity extends ActionBarActivity {
                     break;
                 case R.id.softkeyboard_btn:
                     intent = new Intent(mContext, KeyboardActivity.class);
-                    startActivity(intent);
-                    break;
-                case R.id.panel_btn:
-                    intent =  new Intent(mContext, TestGesture.class);
                     startActivity(intent);
                     break;
                 case R.id.triple:

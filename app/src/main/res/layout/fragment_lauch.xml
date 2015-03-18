@@ -26,7 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="16sp"
-            android:textColor="#ff2fffff"
+            android:textColor="#FFC0CB"
             android:text="我是欢迎消息" />
 
         <Button
@@ -104,17 +104,35 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="blurImage"
-            android:onClick="onBlurImageClick"
-            />
+            android:onClick="onBlurImageClick" />
 
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="gauss blur"
-            android:onClick="onGaussBlurClick"
+            android:onClick="onGaussBlurClick" />
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="morse"
+            android:onClick="onMorseClick" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="spinner"
+            android:onClick="onSpinnerClick" />
+
+        <Button
+            android:id="@+id/otherapp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="otherApp"
+            android:onClick="onOtherAppClick"
             />
+
     </LinearLayout>
 
 </ScrollView>

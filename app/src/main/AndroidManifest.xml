@@ -3,19 +3,24 @@
     package="com.one"
     android:installLocation="auto"
     android:versionCode="20140807"
-    android:versionName="0.0.1" >
+    android:versionName="0.0.1">
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="19" />
 
     <uses-permission android:name="android.permission.DEVICE_POWER" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.BODY_SENSORS" />
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/baby_feet"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <activity
             android:name=".LauchActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,48 +29,37 @@
         </activity>
         <activity
             android:name=".activity.ScreenLockActivity"
-            android:label="@string/title_activity_screen_lock" >
-        </activity>
+            android:label="@string/title_activity_screen_lock"></activity>
         <activity
             android:name=".activity.FrameLayoutActivity"
-            android:label="FrameLayoutActivity" >
-        </activity>
+            android:label="FrameLayoutActivity"></activity>
         <activity
             android:name=".circle.CircleActivity"
-            android:label="CircleActivity" >
-        </activity>
+            android:label="CircleActivity"></activity>
         <activity
             android:name=".activity.KeyboardActivity"
-            android:label="@string/title_activity_keyboard" >
-        </activity>
+            android:label="@string/title_activity_keyboard"></activity>
         <activity
-            android:name="com.sample.fragment.FragmentTestActivity"
-            android:label="FragmentTest" >
-        </activity>
+            android:name="com.demo.fragment.FragmentTestActivity"
+            android:label="FragmentTest"></activity>
         <activity
             android:name=".panel.TestGesture"
-            android:label="TestGesture" >
-        </activity>
+            android:label="TestGesture"></activity>
         <activity
             android:name=".widget.TripleTapActivity"
-            android:label="@string/title_activity_triple_tap" >
-        </activity>
+            android:label="@string/title_activity_triple_tap"></activity>
         <activity
             android:name=".widget.HorizontalActivity"
-            android:label="@string/title_activity_horizontal" >
-        </activity>
+            android:label="@string/title_activity_horizontal"></activity>
         <activity
-            android:name="com.sample.UI.actionbar.ActionBarShareActivity"
-            android:label="ActionBarStyledActivity" >
-        </activity>
+            android:name="com.demo.UI.actionbar.ActionBarShareActivity"
+            android:label="ActionBarStyledActivity"></activity>
         <activity
-            android:name="com.sample.animation.ListFlipper"
-            android:label="@string/title_activity_list_flipper" >
-        </activity>
+            android:name="com.demo.animation.ListFlipper"
+            android:label="@string/title_activity_list_flipper"></activity>
         <activity
             android:name=".anim.AnimActivity"
-            android:label="AnimActivity" >
-        </activity>
+            android:label="AnimActivity"></activity>
 
         <activity
             android:name=".view.ActionBaStylerActivity"
@@ -73,12 +67,37 @@
 
         <activity
             android:name=".view.BlurImageActivity"
-            android:label="blurimage" >
-        </activity>
+            android:label="blurimage"></activity>
 
         <activity
             android:name=".view.GaussBlurActivity"
-            android:label="gauss blur">
+            android:label="gauss blur"></activity>
+
+        <activity
+            android:name=".fun.MorseCodeActivity"
+            android:label="morse code">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="android.intent.category.DEFAULT"></category>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.demo.view.SpinnerActivity"
+            android:label="spinner">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="android.intent.category.DEFAULT"></category>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".app.OtherAppActivity"
+            android:label="interact with other app">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="android.intent.category.DEFAULT"></category>
+            </intent-filter>
         </activity>
 
     </application>

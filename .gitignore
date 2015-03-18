@@ -8,4 +8,10 @@
 apk/*
 apk
 .gitignore
+One.iml
+.idea/encodings.xml
+.idea/misc.xml
+.idea/libraries/support_v4_19_1_0.xml
+.idea/libraries/appcompat_v7_19_1_0.xml
+.idea/inspectionProfiles/Project_Default.xml
 
