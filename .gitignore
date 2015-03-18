@@ -7,6 +7,7 @@
 .idea/*
 apk/*
 apk
+apk/app-debug-unaligned.apk
 .gitignore
 One.iml
 .idea/encodings.xml
