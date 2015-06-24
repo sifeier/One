@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Android 常用RGB值以及中英文 -->
+
+    <color name="LightPink">#FFB6C1</color>     <!-- 浅粉红 -->
+    <color name="Pink">#FFC0CB</color>          <!-- 粉红  -->
+    <color name="Crimson">#DC143C</color>       <!-- 深红/猩红 -->
+    <color name="LavenderBlush">#FFF0F5</color>        <!-- 淡紫色 -->
+    <color name="PaleVioletRed">#DB7093</color>        <!-- 弱紫罗兰红 -->
+    <color name="HotPink">#FF69B4</color>              <!-- 热情的粉红 -->
+    <color name="DeepPink">#FF1493</color>             <!-- 深粉红 -->
+    <color name="MediumVioletRed">#C71585</color>      <!-- 中紫罗兰红 -->
+    <color name="Orchid">#DA70D6</color>               <!-- 暗紫色/兰花紫 -->
+    <color name="Thistle">#D8BFD8</color>              <!-- 蓟色  -->
+    <color name="Plum">#DDA0DD</color>                 <!-- 洋李色/李子紫 -->
+    <color name="Violet">#EE82EE</color>               <!--紫罗兰  -->
+    <color name="Magenta">#FF00FF</color>              <!-- 洋红/玫瑰红 -->
+    <color name="Fuchsia">#FF00F0</color>              <!-- 紫红/灯笼海棠 -->
+    <color name="DardMagenta">#8B008B</color>          <!-- 深洋红 -->
+    <color name="Purple">#800080</color>               <!-- 紫色 -->
+    <color name="MediumOrchid">#BA55D3</color>         <!-- 中兰花紫 -->
+    <color name="DarkViolet">#9400D3</color>           <!-- 暗紫罗兰 -->
+    <color name="DarkOrchid">#9932CC</color>           <!--暗兰花紫  -->
+    <color name="Indigo">#4B0082</color>               <!-- 靛青/紫兰色 -->
+    <color name="BlueViolet">#8A2BE2</color>           <!-- 蓝紫罗兰 -->
+    <color name="MediumPurple">#9370DB</color>         <!-- 中紫色 -->
+    <color name="MediumSlateBlue">#7B68EE</color>      <!-- 中暗蓝色/中板岩蓝  -->
+    <color name="SlateBlue">#6A5ACD</color>            <!-- 石蓝色/板岩蓝 -->
+    <color name="DarkSlateBlue">#483D8B</color>        <!-- 暗灰蓝色/暗板岩蓝 -->
+    <color name="Lavender">#E6E6FA</color>              <!-- 淡紫色/熏衣草淡紫 -->
+    <color name="GhostWhite">#F8F8FF</color>            <!-- 幽灵白 -->
+
+    <color name="Blue">#0000FF</color>                  <!-- 纯蓝 -->
+    <color name="MediumBlue">#0000CD</color>            <!-- 中蓝色 -->
+    <color name="MidnightBlue">#191970</color>          <!-- 午夜蓝 -->
+    <color name="DarkBlue">#00008B</color>              <!-- 暗蓝色 -->
+    <color name="Navy">#000080</color>                  <!-- 海军蓝 -->
+    <color name="RoyalBlue">#4169E1</color>             <!-- 皇家蓝/宝蓝 -->
+    <color name="CornflowerBlue">#6495ED</color>        <!-- 矢车菊蓝 -->
+    <color name="LightSteelBlue">#B0C4DE</color>        <!-- 亮钢蓝 -->
+    <color name="LightSlateGray">#778899</color>        <!-- 亮蓝灰/亮石板灰 -->
+    <color name="SlateGray">#708090</color>             <!-- 灰石色/石板灰 -->
+    <color name="DodgerBlue">#1E90FF</color>            <!-- 闪兰色/道奇蓝 -->
+    <color name="AliceBlue">#F0F8FF</color>             <!-- 爱丽丝蓝 -->
+    <color name="SteelBlue">#4682B4</color>             <!-- 钢蓝/铁青 -->
+    <color name="LightSkyBlue">#87CEFA</color>       <!-- 亮天蓝色 -->
+    <color name="SkyBlue">#87CEEB</color>           <!-- 天蓝色-->
+    <color name="DeepSkyBlue">#008FFF</color>       <!-- 深天蓝 -->
+    <color name="LightBlue">#ADD8E6</color>         <!-- 亮蓝 -->
+    <color name="PoderBlue">#B0E0E6</color>         <!-- 粉蓝色/火药青 -->
+    <color name="CardetBlue">#5F9EA0</color>        <!-- 军兰色/军服蓝 -->
+    <color name="Azure">#F0FFFF</color>             <!-- 蔚蓝色 -->
+
+    <color name="LightCyan">#E0FFFF</color>     <!-- 淡青色 -->
+    <color name="PaleTurquoise">#AFEEEE</color> <!-- 弱绿宝石 -->
+    <color name="Cyan">#00FFFF</color>          <!-- 青色 -->
+    <color name="Aqua">#00FFFF</color>          <!-- 浅绿色/水色 -->
+    <color name="DarkTurquoise">#00CED1</color> <!-- 暗绿宝石 -->
+    <color name="DarkSlateGray">#2F4F4F</color> <!-- 暗瓦灰色/暗石板灰 -->
+    <color name="DarkCyan">#008B8B</color>      <!-- 暗青色 -->
+    <color name="Teal">#008080</color>          <!-- 水鸭色 -->
+    <color name="MediumTurquoise">#48D1CC</color> <!-- 中绿宝石 -->
+    <color name="LightSeaGreen">#20B2AA</color>     <!-- 浅海洋绿 -->
+    <color name="Turquoise">#40E0D0</color>         <!-- 绿宝石 -->
+    <color name="Aquamarine">#7FFFD4</color>        <!--宝石碧绿 -->
+    <color name="MediumAquamarine">#66CDAA</color> <!-- 中宝石碧绿 -->
+    <color name="MediumSpringGreen">#00FA9A</color> <!-- 中春绿色 -->
+    <color name="MintCream">#F5FFFA</color>         <!-- 薄荷奶油 -->
+
+    <color name="SpringGreen">#00FF7F</color>       <!-- 春绿色 -->
+    <color name="MediumSeaGreen">#3CB371</color>    <!-- 中海洋绿 -->
+    <color name="SeaGreen">#2E8B57</color>          <!-- 海洋绿 -->
+    <color name="Honeydew">#F0FFF0</color>          <!-- 蜜色/蜜瓜色 -->
+    <color name="LightGreen">#90EE90</color>        <!-- 淡绿色 -->
+    <color name="PaleGreen">#98FB98</color>         <!--弱绿色  -->
+    <color name="DarkSeaGreen">#8FBC8F</color>      <!-- 暗海洋绿 -->
+    <color name="LimeGreen">#32CD32</color>         <!-- 闪光深绿 -->
+    <color name="Lime">#00FF00</color>              <!-- 闪光绿 -->
+    <color name="ForestGreen">#228B22</color>       <!-- 森林绿 -->
+    <color name="Green">#008000</color>             <!-- 纯绿 -->
+    <color name="DarkGreen">#006400</color>         <!-- 暗绿色 -->
+    <color name="Chartreuse">#7FFF00</color>        <!-- 黄绿色/查特酒绿 -->
+    <color name="LawnGreen">#7CFC00</color>         <!-- 草绿色/草坪绿 -->
+    <color name="GreenYellow">#ADFF2F</color>       <!-- 绿黄色 -->
+    <color name="DarkOliveGreen">#556B2F</color>    <!--暗橄榄绿  -->
+    <color name="YellowGreen">#9ACD32</color>       <!-- 黄绿色 -->
+    <color name="OliveDrab">#6B8E23</color>         <!-- 橄榄褐色 -->
+
+    <color name="Beige">#F5F5DC</color>                 <!-- 米色/灰棕色 -->
+    <color name="LightGoldenrodYellow">#FAFAD2</color>  <!-- 亮菊黄 -->
+    <color name="Ivory">#FFFFF0</color>                 <!-- 象牙色 -->
+    <color name="LightYellow">#FFFFE0</color>           <!-- 浅黄色 -->
+    <color name="Yellow">#FFFF00</color>                <!-- 纯黄 -->
+    <color name="Olive">#808000</color>                 <!-- 橄榄 -->
+    <color name="DarkKhaki">#BDB76B</color>             <!-- 暗黄褐色/深卡叽布 -->
+    <color name="LemonChiffon">#FFFACD</color>          <!-- 柠檬绸 -->
+    <color name="PaleGoldenrod">#EEE8AA</color>         <!-- 灰菊黄/苍麒麟色 -->
+    <color name="Khaki">#F0E68C</color>                 <!-- 黄褐色/卡叽布 -->
+    <color name="Gold">#FFD700</color>          <!-- 金色 -->
+
+    <color name="Cornsilk">#FFF8DC</color>      <!--玉米丝色  -->
+    <color name="Goldenrod">#DAA520</color>     <!-- 金菊黄 -->
+    <color name="DarkGoldenrod">#B8860B</color> <!-- 暗金菊黄 -->
+    <color name="FloralWhite">#FFFAF0</color>   <!-- 花的白色 -->
+    <color name="OldLace">#FDF5E6</color>       <!-- 老花色/旧蕾丝 -->
+    <color name="Wheat">#F5DEB3</color>         <!-- 浅黄色/小麦色 -->
+    <color name="Moccasin">#FFE4B5</color>      <!-- 鹿皮色/鹿皮靴 -->
+    <color name="Orange">#FFA500</color>        <!-- 橙色 -->
+    <color name="PapayaWhip">#FFEFD5</color>    <!-- 番木色/番木瓜 -->
+    <color name="BlanchedAlmond">#FFEBCD</color> <!-- 白杏色 -->
+    <color name="NavajoWhite">#FFDEAD</color>   <!-- 纳瓦白/土著白 -->
+    <color name="AntiqueWhite">#FAEBD7</color>  <!-- 古董白-->
+    <color name="Tan">#D2B48C</color>           <!-- 茶色 -->
+    <color name="BurlyWood">#DEB887</color>     <!-- 硬木色 -->
+    <color name="Bisque">#FFE4C4</color>        <!-- 陶坯黄 -->
+    <color name="DarkOrange">#FF8C00</color>    <!-- 深橙色 -->
+    <color name="Linen">#FAF0E6</color>         <!-- 亚麻布 -->
+    <color name="Peru">#CD853F</color>          <!-- 秘鲁色 -->
+    <color name="PeachPuff">#FFDAB9</color>     <!-- 桃肉色 -->
+    <color name="SandyBrown">#F4A460</color>    <!-- 沙棕色 -->
+    <color name="Chocolate">#D2691E</color>     <!-- 巧克力色 -->
+    <color name="SaddleBrown">#8B4513</color>   <!-- 重褐色/马鞍棕色 -->
+    <color name="SeaShell">#FFF5EE</color>      <!-- 海贝壳 -->
+    <color name="Sienna">#A0522D</color>        <!-- 黄土赭色 -->
+
+    <color name="LightSalmon">#FFA07A</color>       <!-- 浅鲑鱼肉色 -->
+    <color name="Coral">#FF7F50</color>             <!-- 珊瑚 -->
+    <color name="OrangeRed">#FF4500</color>         <!-- 橙红色 -->
+    <color name="DarkSalmon">#E9967A</color>        <!-- 深鲜肉/鲑鱼色 -->
+    <color name="Tomato">#FF6347</color>            <!-- 番茄红 -->
+    <color name="MistyRose">#FFE4E1</color>         <!-- 浅玫瑰色/薄雾玫瑰 -->
+    <color name="Salmon">#FA8072</color>            <!-- 鲜肉/鲑鱼色 -->
+    <color name="Snow">#FFFAFA</color>              <!-- 雪白色 -->
+    <color name="LightCoral">#F08080</color>        <!-- 淡珊瑚色 -->
+    <color name="RosyBrown">#BC8F8F</color>         <!-- 玫瑰棕色 -->
+    <color name="IndianRed">#CD5C5C</color>         <!-- 印度红 -->
+    <color name="Red">#FF0000</color>               <!-- 纯红 -->
+    <color name="Brown">#A52A2A</color>             <!-- 棕色 -->
+    <color name="FireBrick">#B22222</color>         <!-- 火砖色/耐火砖 -->
+    <color name="DarkRed">#8B0000</color>           <!-- 深红色 -->
+    <color name="Maroon">#800000</color>            <!-- 栗色 -->
+
+    <color name="White">#FFFFFF</color>         <!-- 纯白-->
+    <color name="WhiteSmoke">#F5F5F5</color>    <!-- 白烟 -->
+    <color name="Gainsboro">#DCDCDC</color>     <!-- 淡灰色 -->
+    <color name="LightGrey">#D3D3D3</color>     <!-- 浅灰色 -->
+    <color name="Silver">#C0C0C0</color>        <!-- 银灰色 -->
+    <color name="DarkGray">#A9A9A9</color>      <!-- 深灰色 -->
+    <color name="Gray">#808080</color>          <!-- 灰色 -->
+    <color name="DimGray">#696969</color>       <!-- 暗淡灰 -->
+    <color name="Black">#000000</color>         <!-- 纯黑 -->
+
+</resources>

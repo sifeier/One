@@ -21,10 +21,13 @@ import com.demo.view.SpinnerActivity;
 import com.one.activity.FrameLayoutActivity;
 import com.one.activity.KeyboardActivity;
 import com.one.activity.ScreenLockActivity;
+import com.one.activity.WidgetBoxActivity;
 import com.one.anim.AnimActivity;
 import com.one.app.OtherAppActivity;
 import com.one.circle.CircleActivity;
 import com.one.fun.MorseCodeActivity;
+import com.one.material.DrawerActivity;
+import com.one.material.MaterialDActivity;
 import com.one.view.ActionBaStylerActivity;
 import com.one.view.BlurImageActivity;
 import com.one.view.GaussBlurActivity;
@@ -148,6 +151,9 @@ public class LauchActivity extends ActionBarActivity {
             parent.findViewById(R.id.fragment).setOnClickListener(this);
             parent.findViewById(R.id.actionbar_base).setOnClickListener(this);
             parent.findViewById(R.id.drag).setOnClickListener(this);
+            parent.findViewById(R.id.material).setOnClickListener(this);
+            parent.findViewById(R.id.material_drawer).setOnClickListener(this);
+            parent.findViewById(R.id.widget_box).setOnClickListener(this);
         }
 
         @Override
@@ -190,6 +196,17 @@ public class LauchActivity extends ActionBarActivity {
                     intent = new Intent(mContext, AnimActivity.class);
                     startActivity(intent);
                     break;
+                case R.id.material:
+                    intent = new Intent(mContext, MaterialDActivity.class);
+                    startActivity(intent);
+                    break;
+                case R.id.material_drawer:
+                    intent = new Intent(mContext, DrawerActivity.class);
+                    startActivity(intent);
+                    break;
+                case R.id.widget_box:
+                    intent  = new Intent(mContext, WidgetBoxActivity.class);
+                    startActivity(intent);
                 default:
                     break;
             }
