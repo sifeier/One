@@ -21,6 +21,7 @@ import com.demo.view.SpinnerActivity;
 import com.one.activity.FrameLayoutActivity;
 import com.one.activity.KeyboardActivity;
 import com.one.activity.ScreenLockActivity;
+import com.one.activity.WidgetBox1Activity;
 import com.one.activity.WidgetBoxActivity;
 import com.one.anim.AnimActivity;
 import com.one.app.OtherAppActivity;
@@ -154,6 +155,7 @@ public class LauchActivity extends ActionBarActivity {
             parent.findViewById(R.id.material).setOnClickListener(this);
             parent.findViewById(R.id.material_drawer).setOnClickListener(this);
             parent.findViewById(R.id.widget_box).setOnClickListener(this);
+            parent.findViewById(R.id.widget_box1).setOnClickListener(this);
         }
 
         @Override
@@ -206,6 +208,10 @@ public class LauchActivity extends ActionBarActivity {
                     break;
                 case R.id.widget_box:
                     intent  = new Intent(mContext, WidgetBoxActivity.class);
+                    startActivity(intent);
+                    break;
+                case R.id.widget_box1:
+                    intent  = new Intent(mContext, WidgetBox1Activity.class);
                     startActivity(intent);
                 default:
                     break;

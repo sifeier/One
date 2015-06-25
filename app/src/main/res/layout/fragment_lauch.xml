@@ -98,7 +98,14 @@
                 android:id="@+id/widget_box"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="widget box"
+                android:text="pull to refresh"
+                />
+
+        <Button
+                android:id="@+id/widget_box1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="widget box1"
                 />
 
         <Button

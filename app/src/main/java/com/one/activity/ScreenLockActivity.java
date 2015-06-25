@@ -14,7 +14,7 @@ import android.hardware.SensorManager;
 import com.one.R;
 
 public class ScreenLockActivity extends ActionBarActivity implements SensorEventListener{
-    private static final String TAG = "Activity - ScreenLockActivity";
+    private static final String TAG = "ScreenLockActivity";
     private SensorManager mSensorManager;
     private PowerManager mPowerManager;
     private PowerManager.WakeLock mWakeLock;

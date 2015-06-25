@@ -15,7 +15,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/baby_feet"
+        android:icon="@drawable/ic_coffee"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
         <activity
@@ -27,51 +27,77 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".activity.ScreenLockActivity"
-            android:label="@string/title_activity_screen_lock"></activity>
+            android:label="@string/title_activity_screen_lock"/>
+
         <activity
             android:name=".activity.FrameLayoutActivity"
-            android:label="FrameLayoutActivity"></activity>
+            android:label="FrameLayoutActivity"/>
+
         <activity
             android:name=".circle.CircleActivity"
-            android:label="CircleActivity"></activity>
+            android:label="CircleActivity"/>
+
         <activity
             android:name=".activity.KeyboardActivity"
-            android:label="@string/title_activity_keyboard"></activity>
+            android:label="@string/title_activity_keyboard"/>
+
         <activity
             android:name="com.demo.fragment.FragmentTestActivity"
-            android:label="FragmentTest"></activity>
-        <activity
-            android:name=".panel.TestGesture"
-            android:label="TestGesture"></activity>
+            android:label="FragmentTest"/>
+
         <activity
             android:name=".widget.TripleTapActivity"
-            android:label="@string/title_activity_triple_tap"></activity>
+            android:label="@string/title_activity_triple_tap"/>
+
         <activity
             android:name=".widget.HorizontalActivity"
-            android:label="@string/title_activity_horizontal"></activity>
+            android:label="@string/title_activity_horizontal"/>
+
         <activity
             android:name="com.demo.UI.actionbar.ActionBarShareActivity"
-            android:label="ActionBarStyledActivity"></activity>
+            android:label="ActionBarStyledActivity"/>
         <activity
             android:name="com.demo.animation.ListFlipper"
-            android:label="@string/title_activity_list_flipper"></activity>
+            android:label="@string/title_activity_list_flipper"/>
+
         <activity
             android:name=".anim.AnimActivity"
-            android:label="AnimActivity"></activity>
+            android:label="AnimActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="android.intent.category.DEFAULT"></category>
+            </intent-filter>
+        </activity>
 
         <activity
             android:name=".view.ActionBaStylerActivity"
-            android:label="actionbarstyle"></activity>
+            android:label="actionbarstyle">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="android.intent.category.DEFAULT"></category>
+            </intent-filter>
+        </activity>
 
         <activity
             android:name=".view.BlurImageActivity"
-            android:label="blurimage"></activity>
+            android:label="blurimage">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="android.intent.category.DEFAULT"></category>
+            </intent-filter>
+        </activity>
 
         <activity
             android:name=".view.GaussBlurActivity"
-            android:label="gauss blur"></activity>
+            android:label="gauss blur">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="android.intent.category.DEFAULT"></category>
+            </intent-filter>
+        </activity>
 
         <activity
             android:name=".fun.MorseCodeActivity"
@@ -120,6 +146,15 @@
 
         <activity
                 android:name=".activity.WidgetBoxActivity"
+                android:label="widget" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="android.intent.category.DEFAULT"></category>
+            </intent-filter>
+        </activity>
+
+        <activity
+                android:name=".activity.WidgetBox1Activity"
                 android:label="widget" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"></action>

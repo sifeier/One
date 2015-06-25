@@ -40,4 +40,7 @@ dependencies {
 
     compile 'com.android.support:design:22.2.0'
 
+    // 下拉刷新, 已经接入源代码
+    // compile 'com.yalantis:phoenix:1.2.1'
+
 }

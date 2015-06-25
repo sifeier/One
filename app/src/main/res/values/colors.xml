@@ -50,8 +50,8 @@
     <color name="LightBlue">#ADD8E6</color>         <!-- 亮蓝 -->
     <color name="PoderBlue">#B0E0E6</color>         <!-- 粉蓝色/火药青 -->
     <color name="CardetBlue">#5F9EA0</color>        <!-- 军兰色/军服蓝 -->
-    <color name="Azure">#F0FFFF</color>             <!-- 蔚蓝色 -->
 
+    <color name="Azure">#F0FFFF</color>             <!-- 蔚蓝色 -->
     <color name="LightCyan">#E0FFFF</color>     <!-- 淡青色 -->
     <color name="PaleTurquoise">#AFEEEE</color> <!-- 弱绿宝石 -->
     <color name="Cyan">#00FFFF</color>          <!-- 青色 -->

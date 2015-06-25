@@ -1,5 +1,6 @@
 package com.one.util;
 
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.os.Build;
 import android.os.Looper;
@@ -61,6 +62,11 @@ public final class Utils {
             throw new  IllegalStateException();
         }
         return result;
+    }
+
+    public static int dp2px(Context context, int dp) {
+        float density = context.getResources().getDisplayMetrics().density;
+        return Math.round((float) dp * density);
     }
 
 }

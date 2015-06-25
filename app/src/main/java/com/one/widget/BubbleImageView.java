@@ -21,7 +21,7 @@ import android.util.TypedValue;
 import android.widget.ImageView;
 
 /**
- * @author baoyz
+ * @author sifeierss
  * @date 2014-7-19
  */
 public class BubbleImageView extends ImageView {
