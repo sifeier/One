@@ -26,6 +26,7 @@ import com.one.activity.WidgetBoxActivity;
 import com.one.anim.AnimActivity;
 import com.one.app.OtherAppActivity;
 import com.one.circle.CircleActivity;
+import com.one.draggridview.DragGridviewActivity;
 import com.one.fun.MorseCodeActivity;
 import com.one.material.DrawerActivity;
 import com.one.material.MaterialDActivity;
@@ -36,6 +37,7 @@ import com.one.widget.HorizontalActivity;
 import com.one.widget.TripleTapActivity;
 import com.demo.UI.actionbar.ActionBarShareActivity;
 import com.demo.fragment.FragmentTestActivity;
+import com.switchlayout.SwitchMainActivity;
 
 import java.lang.ref.WeakReference;
 
@@ -156,6 +158,8 @@ public class LauchActivity extends ActionBarActivity {
             parent.findViewById(R.id.material_drawer).setOnClickListener(this);
             parent.findViewById(R.id.widget_box).setOnClickListener(this);
             parent.findViewById(R.id.widget_box1).setOnClickListener(this);
+            parent.findViewById(R.id.switch_layout).setOnClickListener(this);
+            parent.findViewById(R.id.drag_gridview).setOnClickListener(this);
         }
 
         @Override
@@ -212,6 +216,14 @@ public class LauchActivity extends ActionBarActivity {
                     break;
                 case R.id.widget_box1:
                     intent  = new Intent(mContext, WidgetBox1Activity.class);
+                    startActivity(intent);
+                    break;
+                case R.id.switch_layout:
+                    intent = new Intent(mContext, SwitchMainActivity.class);
+                    startActivity(intent);
+                    break;
+                case R.id.drag_gridview:
+                    intent = new Intent(mContext, DragGridviewActivity.class);
                     startActivity(intent);
                 default:
                     break;

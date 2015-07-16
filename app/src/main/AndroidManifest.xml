@@ -162,6 +162,33 @@
             </intent-filter>
         </activity>
 
+        <activity
+                android:name="com.switchlayout.SwitchMainActivity"
+                android:label="widget" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="android.intent.category.DEFAULT"></category>
+            </intent-filter>
+        </activity>
+
+        <activity
+                android:name="com.switchlayout.SwitchSecondActivity"
+                android:label="widget" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="android.intent.category.DEFAULT"></category>
+            </intent-filter>
+        </activity>
+
+        <activity
+                android:name="com.one.draggridview.DragGridviewActivity"
+                android:label="widget" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="android.intent.category.DEFAULT"></category>
+            </intent-filter>
+        </activity>
+
     </application>
 
 </manifest>

@@ -109,6 +109,20 @@
                 />
 
         <Button
+                android:id="@+id/switch_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="switch layout"
+                />
+
+        <Button
+                android:id="@+id/drag_gridview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="drag gridview"
+                />
+
+        <Button
                 android:id="@+id/material"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
