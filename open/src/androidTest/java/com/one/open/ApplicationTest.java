@@ -1,4 +1,4 @@
-package com.example.open;
+package com.one.open;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
