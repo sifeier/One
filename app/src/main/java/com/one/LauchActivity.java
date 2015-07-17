@@ -27,6 +27,7 @@ import com.one.anim.AnimActivity;
 import com.one.app.OtherAppActivity;
 import com.one.circle.CircleActivity;
 import com.one.draggridview.DragGridviewActivity;
+import com.one.favor.FavorActivity;
 import com.one.fun.MorseCodeActivity;
 import com.one.material.DrawerActivity;
 import com.one.material.MaterialDActivity;
@@ -160,6 +161,7 @@ public class LauchActivity extends ActionBarActivity {
             parent.findViewById(R.id.widget_box1).setOnClickListener(this);
             parent.findViewById(R.id.switch_layout).setOnClickListener(this);
             parent.findViewById(R.id.drag_gridview).setOnClickListener(this);
+            parent.findViewById(R.id.favor_tv).setOnClickListener(this);
         }
 
         @Override
@@ -225,6 +227,11 @@ public class LauchActivity extends ActionBarActivity {
                 case R.id.drag_gridview:
                     intent = new Intent(mContext, DragGridviewActivity.class);
                     startActivity(intent);
+                    break;
+                case R.id.favor_tv:
+                    intent = new Intent(mContext, FavorActivity.class);
+                    startActivity(intent);
+                    break;
                 default:
                     break;
             }

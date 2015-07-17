@@ -189,6 +189,15 @@
             </intent-filter>
         </activity>
 
+        <activity
+                android:name=".favor.FavorActivity"
+                android:label="widget">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
     </application>
 
 </manifest>
