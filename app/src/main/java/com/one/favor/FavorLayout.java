@@ -24,9 +24,9 @@ public class FavorLayout extends RelativeLayout implements View.OnClickListener{
 
     private Random mRandom;
 
-    private int dHeight = 20;  // 爱心的高和宽
+    private int dHeight = 40;  // 爱心的高和宽
 
-    private int dWidth = 20;
+    private int dWidth = 40;
 
     private int mHeight;  //FavorLayout 的高和宽
 

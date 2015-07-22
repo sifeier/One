@@ -4,6 +4,7 @@ import android.content.Context;
 import android.text.TextUtils;
 import android.webkit.CookieManager;
 import android.webkit.CookieSyncManager;
+import android.webkit.WebView;
 
 import java.util.Map;
 import java.util.regex.Matcher;
@@ -12,7 +13,7 @@ import java.util.regex.Pattern;
 /**
  * Created by buke on 15/7/17.
  */
-public class CookieUtil {
+public class WebViewUtil {
 
     /**
      * 构建 cookie 字符串
@@ -77,5 +78,9 @@ public class CookieUtil {
         return content;
     }
 
+    public static void clear(WebView webView) {
+        webView.clearCache(true);
+        webView.clearHistory();
+    }
 
 }

@@ -1,16 +1,14 @@
-package com.one.widget;
+package com.one.common.widget;
 
 import android.text.Spannable;
 import android.text.TextPaint;
 import android.text.style.URLSpan;
 import android.widget.TextView;
 
-import java.net.URLStreamHandler;
-
 /**
  * Created by buke on 15/7/16.
  */
-public class URLSpanNoUnderline  extends URLSpan{
+public class URLSpanNoUnderline extends URLSpan{
 
     public URLSpanNoUnderline(String url) {
         super(url);

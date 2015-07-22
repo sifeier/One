@@ -15,12 +15,7 @@
             android:orientation="vertical"
             tools:context=".LauchActivity$PlaceholderFragment">
 
-        <TextView
-                android:id="@+id/favor_tv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="favor heart"
-                />
+
 
         <TextView
                 android:id="@+id/hello_tv"
@@ -35,6 +30,13 @@
                 android:textSize="16sp"
                 android:textColor="#FFC0CB"
                 android:text="我是欢迎消息"/>
+
+        <Button
+                android:id="@+id/favor_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="favor heart"
+                />
 
         <Button
                 android:id="@+id/screenlock_btn"
