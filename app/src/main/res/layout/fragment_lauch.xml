@@ -16,7 +16,6 @@
             tools:context=".LauchActivity$PlaceholderFragment">
 
 
-
         <TextView
                 android:id="@+id/hello_tv"
                 android:text="@string/hello_coffee"
@@ -58,6 +57,13 @@
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
                 android:text="circle"/>
+
+        <Button
+                android:id="@+id/webview_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="webview"
+                />
 
         <Button
                 android:id="@+id/softkeyboard_btn"

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        >
+
+    <ImageView
+            android:id="@+id/item_icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_coffee"
+            />
+
+    <ImageView
+            android:id="@+id/item_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_alignParentBottom="true"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:paddingBottom="2dp"
+            android:src="@color/BlueViolet"
+            />
+
+</RelativeLayout>

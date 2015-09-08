@@ -51,7 +51,17 @@
         android:layout_alignBottom="@id/divider_iv"
         android:background="#555555"
         android:scaleType="center"
-        src="@drawable/house_main"
+        android:src="@drawable/house_main"
         />
+
+    <LinearLayout
+            android:id="@+id/dynamic_ly"
+            android:layout_width="match_parent"
+            android:layout_height="88dp"
+            android:layout_above="@id/dash_place"
+            android:orientation="horizontal"
+            android:background="@color/Pink"
+            >
+    </LinearLayout>
 
 </RelativeLayout>

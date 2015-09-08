@@ -31,6 +31,7 @@ import com.one.favor.FavorActivity;
 import com.one.fun.MorseCodeActivity;
 import com.one.material.DrawerActivity;
 import com.one.material.MaterialDActivity;
+import com.one.net.WebViewTest;
 import com.one.view.ActionBaStylerActivity;
 import com.one.view.BlurImageActivity;
 import com.one.view.GaussBlurActivity;
@@ -162,12 +163,17 @@ public class LauchActivity extends ActionBarActivity {
             parent.findViewById(R.id.switch_layout).setOnClickListener(this);
             parent.findViewById(R.id.drag_gridview).setOnClickListener(this);
             parent.findViewById(R.id.favor_tv).setOnClickListener(this);
+            parent.findViewById(R.id.webview_btn).setOnClickListener(this);
         }
 
         @Override
         public void onClick(View v) {
             Intent intent;
             switch (v.getId()) {
+                case R.id.webview_btn:
+                    intent = new Intent(mContext, WebViewTest.class);
+                    startActivity(intent);
+                    break;
                 case R.id.screenlock_btn:
                     intent = new Intent(mContext, ScreenLockActivity.class);
                     startActivity(intent);
