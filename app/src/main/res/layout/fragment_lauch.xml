@@ -28,7 +28,14 @@
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
                 android:textColor="#FFC0CB"
-                android:text="我是欢迎消息"/>
+                android:text="let's do code"/>
+
+        <Button
+                android:id="@+id/auto_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="auto"
+                />
 
         <Button
                 android:id="@+id/favor_tv"

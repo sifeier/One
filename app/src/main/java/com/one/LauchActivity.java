@@ -164,6 +164,7 @@ public class LauchActivity extends ActionBarActivity {
             parent.findViewById(R.id.drag_gridview).setOnClickListener(this);
             parent.findViewById(R.id.favor_tv).setOnClickListener(this);
             parent.findViewById(R.id.webview_btn).setOnClickListener(this);
+            parent.findViewById(R.id.auto_btn).setOnClickListener(this);
         }
 
         @Override
@@ -172,6 +173,10 @@ public class LauchActivity extends ActionBarActivity {
             switch (v.getId()) {
                 case R.id.webview_btn:
                     intent = new Intent(mContext, WebViewTest.class);
+                    startActivity(intent);
+                    break;
+                case R.id.auto_btn:
+                    intent = new Intent(mContext, TaskActivity.class);
                     startActivity(intent);
                     break;
                 case R.id.screenlock_btn:

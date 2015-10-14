@@ -28,7 +28,7 @@ public class WidgetBox1Activity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ac_widget_box1);
-        initRotateAnim();
+        //initRotateAnim();
     }
 
     private void initRotateAnim() {

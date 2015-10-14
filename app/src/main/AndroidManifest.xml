@@ -49,6 +49,10 @@
             android:name=".activity.FrameLayoutActivity"
             android:label="FrameLayoutActivity" />
         <activity
+                android:name=".TaskActivity"
+                android:label="process"
+                />
+        <activity
             android:name=".circle.CircleActivity"
             android:label="CircleActivity" />
         <activity
@@ -206,7 +210,7 @@
         </activity>
 
         <service
-            android:name=".service.MyDogService"
+            android:name=".app.MyDogService"
             android:enabled="true"
             android:exported="true" >
         </service>
