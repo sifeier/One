@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.one.R;
+import com.one.common.MessageStatus;
 
 public class CircleActivity extends Activity{
 	private Button addButton;
@@ -25,6 +26,8 @@ public class CircleActivity extends Activity{
 				progressCircle.setProgress(progressCircle.getProgress()+1);
 			}
 		});
+
+		String status = MessageStatus.STATUS_OPP_STORED;
 	}
 
 }

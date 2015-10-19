@@ -4,12 +4,22 @@
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:background="@color/LightBlue" >
+              android:background="@color/LightBlue">
+
+    <SurfaceView
+            android:id="@+id/surface_vv"
+            android:layout_width="324dp"
+            android:layout_height="480dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="20dp"
+            />
 
     <VideoView
             android:id="@+id/vv"
-            android:layout_width="160dp"
-            android:layout_height="120dp"
+            android:layout_width="324dp"
+            android:layout_height="480dp"
+            android:layout_margin="20dp"
+            android:layout_gravity="center_horizontal"
             />
 
     <com.one.widget.BubbleImageView
