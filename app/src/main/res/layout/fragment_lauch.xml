@@ -66,6 +66,13 @@
                 android:text="circle"/>
 
         <Button
+                android:id="@+id/expand_lv_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="expand_lv_btn"
+                />
+
+        <Button
                 android:id="@+id/webview_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -80,11 +87,12 @@
                 android:text="softkeyboard"/>
 
         <Button
+                android:id="@+id/panel_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="panel"
                 android:textSize="18sp"
-                android:id="@+id/panel_btn"/>
+                />
 
         <Button
                 android:id="@+id/triple"

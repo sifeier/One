@@ -29,6 +29,7 @@ import com.one.circle.CircleActivity;
 import com.one.draggridview.DragGridviewActivity;
 import com.one.favor.FavorActivity;
 import com.one.fun.MorseCodeActivity;
+import com.one.listview.ExpandLvActivity;
 import com.one.material.DrawerActivity;
 import com.one.material.MaterialDActivity;
 import com.one.net.WebViewTest;
@@ -165,12 +166,17 @@ public class LauchActivity extends ActionBarActivity {
             parent.findViewById(R.id.favor_tv).setOnClickListener(this);
             parent.findViewById(R.id.webview_btn).setOnClickListener(this);
             parent.findViewById(R.id.auto_btn).setOnClickListener(this);
+            parent.findViewById(R.id.expand_lv_btn).setOnClickListener(this);
         }
 
         @Override
         public void onClick(View v) {
             Intent intent;
             switch (v.getId()) {
+                case R.id.expand_lv_btn:
+                    intent = new Intent(mContext, ExpandLvActivity.class);
+                    startActivity(intent);
+                    break;
                 case R.id.webview_btn:
                     intent = new Intent(mContext, WebViewTest.class);
                     startActivity(intent);

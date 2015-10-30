@@ -13,4 +13,14 @@ public class SoundRecorder extends Activity implements Button.OnClickListener, R
     public void onClick(View v) {
 
     }
+
+    @Override
+    public void onStateChange(int state) {
+
+    }
+
+    @Override
+    public void onError(int error) {
+
+    }
 }
