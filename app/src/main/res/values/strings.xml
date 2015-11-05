@@ -33,4 +33,11 @@
     <string name="quote_3">As for me, all I know is that I know nothing - Socrates</string>
     <string name="title_activity_list_flipper">ListFlipper</string>
 
+
+    <string name="long_example">Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.</string>
+
 </resources>

@@ -6,7 +6,7 @@
     android:versionName="0.0.1" >
 
     <uses-sdk
-        android:minSdkVersion="11"
+        android:minSdkVersion="15"
         android:targetSdkVersion="19" />
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -210,6 +210,15 @@
         </activity>
         <activity
                 android:name=".listview.ExpandLvActivity"
+                android:label="widget" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".activity.ButterknifeActivity"
                 android:label="widget" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

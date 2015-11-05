@@ -37,7 +37,7 @@ public class ExpandLvActivity extends Activity {
 		expandlistView.setGroupIndicator(null); // 去掉默认带的箭头
 		expandlistView.setSelection(0);// 设置默认选中项
 		// 遍历所有group,将所有项设置成默认展开
-		int groupCount = expandlistView.getCount();
+		final int groupCount = expandlistView.getCount();
 		for (int i = 0; i < groupCount; i++) {
 			expandlistView.expandGroup(i);
 		}
@@ -47,7 +47,11 @@ public class ExpandLvActivity extends Activity {
 			@Override
 			public boolean onGroupClick(ExpandableListView parent, View v,
 					int groupPosition, long id) {
-				// TODO Auto-generated method stub
+				if(parent.isGroupExpanded(groupPosition)) {
+					parent.collapseGroup(groupPosition);
+				} else {
+					parent.expandGroup(groupPosition);
+				}
 				return true;
 			}
 		});

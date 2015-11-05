@@ -44,16 +44,19 @@ public class TaskActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.ac_auto);
-        mTextView = (TextView) findViewById(R.id.content_tv);
 
-        mTargetImage = (CropImageView) findViewById(R.id.image_iv);
-        mTargetImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                cropImageView();
-            }
-        });
+        setContentView(R.layout.translucent_background);
+
+//        setContentView(R.layout.ac_auto);
+//        mTextView = (TextView) findViewById(R.id.content_tv);
+//
+//        mTargetImage = (CropImageView) findViewById(R.id.image_iv);
+//        mTargetImage.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                cropImageView();
+//            }
+//        });
 
 
 

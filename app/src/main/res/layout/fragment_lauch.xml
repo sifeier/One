@@ -34,7 +34,14 @@
                 android:id="@+id/auto_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="auto"
+                android:text="easy auto"
+                />
+
+        <Button
+                android:id="@+id/butterknife_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="butter knife ex"
                 />
 
         <Button

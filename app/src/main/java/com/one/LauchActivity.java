@@ -18,6 +18,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.demo.view.SpinnerActivity;
+import com.one.activity.ButterknifeActivity;
 import com.one.activity.FrameLayoutActivity;
 import com.one.activity.KeyboardActivity;
 import com.one.activity.ScreenLockActivity;
@@ -167,6 +168,7 @@ public class LauchActivity extends ActionBarActivity {
             parent.findViewById(R.id.webview_btn).setOnClickListener(this);
             parent.findViewById(R.id.auto_btn).setOnClickListener(this);
             parent.findViewById(R.id.expand_lv_btn).setOnClickListener(this);
+            parent.findViewById(R.id.butterknife_btn).setOnClickListener(this);
         }
 
         @Override
@@ -175,6 +177,10 @@ public class LauchActivity extends ActionBarActivity {
             switch (v.getId()) {
                 case R.id.expand_lv_btn:
                     intent = new Intent(mContext, ExpandLvActivity.class);
+                    startActivity(intent);
+                    break;
+                case R.id.butterknife_btn:
+                    intent = new Intent(mContext, ButterknifeActivity.class);
                     startActivity(intent);
                     break;
                 case R.id.webview_btn:
