@@ -25,6 +25,7 @@ import com.one.activity.ScreenLockActivity;
 import com.one.activity.WidgetBox1Activity;
 import com.one.activity.WidgetBoxActivity;
 import com.one.anim.AnimActivity;
+import com.one.app.AudioRecordTest;
 import com.one.app.OtherAppActivity;
 import com.one.circle.CircleActivity;
 import com.one.draggridview.DragGridviewActivity;
@@ -33,6 +34,7 @@ import com.one.fun.MorseCodeActivity;
 import com.one.listview.ExpandLvActivity;
 import com.one.material.DrawerActivity;
 import com.one.material.MaterialDActivity;
+import com.one.media.CameraActivity;
 import com.one.net.WebViewTest;
 import com.one.view.ActionBaStylerActivity;
 import com.one.view.BlurImageActivity;
@@ -169,6 +171,8 @@ public class LauchActivity extends ActionBarActivity {
             parent.findViewById(R.id.auto_btn).setOnClickListener(this);
             parent.findViewById(R.id.expand_lv_btn).setOnClickListener(this);
             parent.findViewById(R.id.butterknife_btn).setOnClickListener(this);
+            parent.findViewById(R.id.audio_btn).setOnClickListener(this);
+            parent.findViewById(R.id.video_btn).setOnClickListener(this);
         }
 
         @Override
@@ -177,6 +181,14 @@ public class LauchActivity extends ActionBarActivity {
             switch (v.getId()) {
                 case R.id.expand_lv_btn:
                     intent = new Intent(mContext, ExpandLvActivity.class);
+                    startActivity(intent);
+                    break;
+                case R.id.video_btn:
+                    intent = new Intent(mContext, CameraActivity.class);
+                    startActivity(intent);
+                    break;
+                case R.id.audio_btn:
+                    intent = new Intent(mContext, AudioRecordTest.class);
                     startActivity(intent);
                     break;
                 case R.id.butterknife_btn:

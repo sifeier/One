@@ -40,4 +40,10 @@
         See the License for the specific language governing permissions and
         limitations under the License.</string>
 
+
+    <!--media-->
+    <string name="record">Record</string>
+    <string name="stop">Stop</string>
+    <string name="description_info">Info</string>
+
 </resources>

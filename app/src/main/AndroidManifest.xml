@@ -1,236 +1,263 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.one"
-    android:installLocation="auto"
-    android:versionCode="20140807"
-    android:versionName="0.0.1" >
+          package="com.one"
+          android:installLocation="auto"
+          android:versionCode="20140807"
+          android:versionName="0.0.1">
 
     <uses-sdk
-        android:minSdkVersion="15"
-        android:targetSdkVersion="19" />
+            android:minSdkVersion="15"
+            android:targetSdkVersion="19"/>
 
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.BODY_SENSORS" />
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.BODY_SENSORS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA"/>
 
     <application
-        android:allowBackup="true"
-        android:icon="@drawable/ic_coffee"
-        android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+            android:allowBackup="true"
+            android:icon="@drawable/ic_coffee"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme">
         <activity
-            android:name=".LauchActivity"
-            android:label="@string/app_name" >
+                android:name=".LauchActivity"
+                android:label="@string/app_name">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
         <activity
-            android:name=".activity.ScreenLockActivity"
-            android:label="@string/title_activity_screen_lock" />
+                android:name=".activity.ScreenLockActivity"
+                android:label="@string/title_activity_screen_lock"/>
 
         <activity
                 android:name=".net.WebViewTest"
-                android:label="net webview" >
+                android:label="net webview">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
 
         <activity
-            android:name=".activity.FrameLayoutActivity"
-            android:label="FrameLayoutActivity" />
+                android:name=".app.AudioRecordTest"
+                android:label="net webview">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+                android:name=".media.CameraActivity"
+                android:label="video capture test">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+                android:name=".activity.FrameLayoutActivity"
+                android:label="FrameLayoutActivity"/>
+
         <activity
                 android:name=".TaskActivity"
                 android:label="process"
+                android:theme="@android:style/Theme.Wallpaper"
                 />
-        <activity
-            android:name=".circle.CircleActivity"
-            android:label="CircleActivity" />
-        <activity
-            android:name=".activity.KeyboardActivity"
-            android:label="@string/title_activity_keyboard" />
-        <activity
-            android:name="com.demo.fragment.FragmentTestActivity"
-            android:label="FragmentTest" />
-        <activity
-            android:name=".widget.TripleTapActivity"
-            android:label="@string/title_activity_triple_tap" />
-        <activity
-            android:name=".widget.HorizontalActivity"
-            android:label="@string/title_activity_horizontal" />
-        <activity
-            android:name="com.demo.UI.actionbar.ActionBarShareActivity"
-            android:label="ActionBarStyledActivity" />
-        <activity
-            android:name="com.demo.animation.ListFlipper"
-            android:label="@string/title_activity_list_flipper" />
-        <activity
-            android:name=".anim.AnimActivity"
-            android:label="AnimActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.DEFAULT" />
+        <activity
+                android:name=".circle.CircleActivity"
+                android:label="CircleActivity"/>
+
+        <activity
+                android:name=".activity.KeyboardActivity"
+                android:label="@string/title_activity_keyboard"/>
+        <activity
+                android:name="com.demo.fragment.FragmentTestActivity"
+                android:label="FragmentTest"/>
+
+        <activity
+                android:name=".widget.TripleTapActivity"
+                android:label="@string/title_activity_triple_tap"/>
+
+        <activity
+                android:name=".widget.HorizontalActivity"
+                android:label="@string/title_activity_horizontal"/>
+        <activity
+                android:name="com.demo.UI.actionbar.ActionBarShareActivity"
+                android:label="ActionBarStyledActivity"/>
+
+        <activity
+                android:name="com.demo.animation.ListFlipper"
+                android:label="@string/title_activity_list_flipper"/>
+
+        <activity
+                android:name=".anim.AnimActivity"
+                android:label="AnimActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
         <activity
-            android:name=".view.ActionBaStylerActivity"
-            android:label="actionbarstyle" >
+                android:name=".view.ActionBaStylerActivity"
+                android:label="actionbarstyle">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
         <activity
-            android:name=".view.BlurImageActivity"
-            android:label="blurimage" >
+                android:name=".view.BlurImageActivity"
+                android:label="blurimage">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
         <activity
-            android:name=".view.GaussBlurActivity"
-            android:label="gauss blur" >
+                android:name=".view.GaussBlurActivity"
+                android:label="gauss blur">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
         <activity
-            android:name=".fun.MorseCodeActivity"
-            android:label="morse code" >
+                android:name=".fun.MorseCodeActivity"
+                android:label="morse code">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
         <activity
-            android:name="com.demo.view.SpinnerActivity"
-            android:label="spinner" >
+                android:name="com.demo.view.SpinnerActivity"
+                android:label="spinner">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
         <activity
-            android:name=".app.OtherAppActivity"
-            android:label="interact with other app" >
+                android:name=".app.OtherAppActivity"
+                android:label="interact with other app">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
         <activity
-            android:name=".material.MaterialDActivity"
-            android:label="material" >
+                android:name=".material.MaterialDActivity"
+                android:label="material">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
         <activity
-            android:name=".material.DrawerActivity"
-            android:label="material" >
+                android:name=".material.DrawerActivity"
+                android:label="material">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
         <activity
-            android:name=".activity.WidgetBoxActivity"
-            android:label="widget" >
+                android:name=".activity.WidgetBoxActivity"
+                android:label="widget">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
         <activity
-            android:name=".activity.WidgetBox1Activity"
-            android:label="widget" >
+                android:name=".activity.WidgetBox1Activity"
+                android:label="widget">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
         <activity
-            android:name="com.switchlayout.SwitchMainActivity"
-            android:label="widget" >
+                android:name="com.switchlayout.SwitchMainActivity"
+                android:label="widget">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
         <activity
-            android:name="com.switchlayout.SwitchSecondActivity"
-            android:label="widget" >
+                android:name="com.switchlayout.SwitchSecondActivity"
+                android:label="widget">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
         <activity
-            android:name=".draggridview.DragGridviewActivity"
-            android:label="widget" >
+                android:name=".draggridview.DragGridviewActivity"
+                android:label="widget">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
         <activity
-            android:name=".favor.FavorActivity"
-            android:label="widget" >
+                android:name=".favor.FavorActivity"
+                android:label="widget">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
         <activity
                 android:name=".listview.ExpandLvActivity"
-                android:label="widget" >
+                android:label="widget">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
         <activity
                 android:name=".activity.ButterknifeActivity"
-                android:label="widget" >
+                android:label="widget">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
 
         <service
-            android:name=".app.MyDogService"
-            android:enabled="true"
-            android:exported="true" >
+                android:name=".app.MyDogService"
+                android:enabled="true"
+                android:exported="true">
         </service>
     </application>
 

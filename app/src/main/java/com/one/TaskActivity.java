@@ -45,6 +45,12 @@ public class TaskActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        /**
+         *
+         * in AndroidManifest.xml, the activity style should be set as follow:
+         * android:theme="@android:style/Theme.Wallpaper"
+         *
+         */
         setContentView(R.layout.translucent_background);
 
 //        setContentView(R.layout.ac_auto);

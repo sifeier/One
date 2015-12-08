@@ -38,6 +38,20 @@
                 />
 
         <Button
+                android:id="@+id/audio_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="audio test"
+                />
+
+            <Button
+                    android:id="@+id/video_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="video test"
+                    />
+
+        <Button
                 android:id="@+id/butterknife_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -135,7 +149,7 @@
                 android:id="@+id/widget_box"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="pull to refresh"
+                android:text="widget box"
                 />
 
         <Button
