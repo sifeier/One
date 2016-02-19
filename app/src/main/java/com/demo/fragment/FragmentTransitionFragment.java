@@ -39,7 +39,7 @@ public class FragmentTransitionFragment extends Fragment implements AdapterView.
         return new FragmentTransitionFragment();
     }
 
-    private FragmentTransitionFragment() {
+    public FragmentTransitionFragment() {
     }
 
     @Override

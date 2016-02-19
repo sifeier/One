@@ -35,4 +35,69 @@
         </attr>
     </declare-styleable>
 
+    <string-array name="country">
+        <item>China</item>
+        <item>England</item>
+        <item>America</item>
+        <item>Japan</item>
+        <item>France</item>
+    </string-array>
+
+    <declare-styleable name="RecyclerViewPager">
+        <attr name="triggerOffset" format="float"/>
+        <attr name="flingFactor" format="float"/>
+        <attr name="singlePageFling" format="boolean"/>
+        <attr name="loopEnabled" format="boolean"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="ICustomAttributes">
+
+        <!-- Color of ripple animation -->
+        <attr name="rippleColor"/>
+        <!-- Speed of ripple animation -->
+        <attr name="rippleSpeed" format="float"/>
+        <!-- indicate if the slider must show number indicator -->
+        <attr name="showNumberIndicator" format="boolean"/>
+        <!-- in progress view indicate max value of progress -->
+        <attr name="max" format="integer"/>
+        <!-- in progress view indicate min value of progress -->
+        <attr name="min" format="integer"/>
+        <!-- in progress view indicate value of progress -->
+        <attr name="value" format="integer"/>
+        <!-- in progress view indicate value of progress -->
+        <attr name="progress" format="integer"/>
+        <attr name="ringWidth" format="dimension"/>
+        <!-- in switche's view indicate state of view -->
+        <attr name="check" format="boolean"/>
+        <attr name="checkBoxSize" format="dimension"/>
+        <attr name="thumbSize" format="dimension"/>
+        <!-- in float button indicate icon resource -->
+        <attr name="iconDrawable" format="integer"/>
+        <!-- in button whitch contains drawable indicate icon resource -->
+        <attr name="iconSize" format="dimension"/>
+        <!-- in float button indicate if must start with animation -->
+        <attr name="animate" format="boolean"/>
+        <!-- set the border of the ripple frame -->
+        <attr name="rippleBorderRadius" format="float"/>
+        <!-- if true, delays calls to OnClickListeners until ripple effect ends -->
+        <attr name="clickAfterRipple" format="boolean"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="CircleProgressBar">
+        <attr name="roundColor" format="color"/>
+        <attr name="roundProgressColor" format="color"/>
+        <attr name="roundWidth" format="dimension"></attr>
+        <attr name="style">
+            <enum name="STROKE" value="0"></enum>
+            <enum name="FILL" value="1"></enum>
+        </attr>
+        <attr name="max"/>
+
+        <attr name="textColor" format="color"/>
+        <attr name="textSize" format="dimension"/>
+        <attr name="textIsDisplayable" format="boolean"></attr>
+    </declare-styleable>
+
 </resources>

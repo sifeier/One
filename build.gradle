@@ -1,26 +1,56 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
+ext {
+    compileSdkVersion = 23
+    buildToolsVersion = "23.0.2"
+    minSdkVersion = 15
+    targetSdkVersion = 22
+    mvnRepository = "http://mvnrepo.alibaba-inc.com/mvn/repository"
+    mvnSnapshotsRepository = "http://mvnrepo.alibaba-inc.com/mvn/snapshots"
+    compileJdkVersion = JavaVersion.VERSION_1_8
+    targetJdkVersion = JavaVersion.VERSION_1_7
+    versionCode = 16020201
+    versionName = "1.0.1"
+}
+
+//每个project构建过程中，都需要依赖gradle构建工具，所以在rootProject里面写一次就好了。
 buildscript {
     repositories {
         jcenter()
-        maven {
-            url "https://oss.sonatype.org/content/repositories/snapshots"
-        }
+        mavenCentral()
     }
-
-
-
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.0.0'
-
-
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
+        classpath 'com.android.tools.build:gradle:1.5.0'
+        classpath 'me.tatarka:gradle-retrolambda:3.2.4'
     }
 }
 
 allprojects {
+    //指定maven仓库，这里面的指定方式和pom类似：设置多个仓库,构建的时候会从上往下找，上面的仓库地址找不到的时候再去下一个地址找
     repositories {
-        jcenter()
+        maven {
+            url rootProject.ext.mvnRepository
+        }
+
+        maven {
+            mavenLocal()
+            mavenCentral()
+//            url rootProject.ext.mvnSnapshotsRepository
+            url "https://jitpack.io"
+        }
+        maven {
+            jcenter()
+            url "https://oss.sonatype.org/content/repositories/snapshots"
+        }
+
+//        maven { url "https://jitpack.io" }
+    }
+
+    //指定编码类型
+    tasks.withType(JavaCompile) {
+        options.encoding = "UTF-8"
     }
 }
+
+//        maven { url "https://jitpack.io" }
+

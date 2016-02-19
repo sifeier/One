@@ -72,45 +72,5 @@
 
     </com.one.panel.Panel>
 
-    <com.one.panel.Panel
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:panel="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/panel_rtl"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_marginTop="1px"
-        android:layout_gravity="right"
-        panel:position="right"
-        >
-
-        <ImageButton
-            android:id="@+id/panelHandle"
-            android:layout_width="12dp"
-            android:layout_height="match_parent"
-            android:contentDescription ="@null"
-            android:background="@drawable/chat_drawer_private_handle_r"
-            />
-
-        <LinearLayout
-            android:id="@+id/panelContent"
-            android:layout_width="480dp"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:padding="1dp"
-                android:singleLine="true"
-                android:textSize="15sp"
-                android:textColor="#000000"
-                android:text="悄悄话模式"
-                android:background="#d4d4d4"
-                />
-        </LinearLayout>
-
-    </com.one.panel.Panel>
 
 </FrameLayout>

@@ -16,6 +16,7 @@
 
 package com.demo.fragment;
 
+import android.annotation.TargetApi;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -69,7 +70,7 @@ public class DetailFragment extends Fragment implements Animation.AnimationListe
         return fragment;
     }
 
-    private DetailFragment() {
+    public DetailFragment() {
     }
 
     @Override
@@ -139,6 +140,7 @@ public class DetailFragment extends Fragment implements Animation.AnimationListe
         // There is nothing we need to do in this sample.
     }
 
+    @TargetApi(19)
     @Override
     public void onAnimationEnd(Animation animation) {
         // This method is called at the end of the animation for the fragment transaction,
