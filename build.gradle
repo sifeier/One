@@ -7,7 +7,7 @@ ext {
     targetSdkVersion = 22
     mvnRepository = "http://mvnrepo.alibaba-inc.com/mvn/repository"
     mvnSnapshotsRepository = "http://mvnrepo.alibaba-inc.com/mvn/snapshots"
-    compileJdkVersion = JavaVersion.VERSION_1_8
+    compileJdkVersion = JavaVersion.VERSION_1_7
     targetJdkVersion = JavaVersion.VERSION_1_7
     versionCode = 16020201
     versionName = "1.0.1"
@@ -15,12 +15,14 @@ ext {
 
 //每个project构建过程中，都需要依赖gradle构建工具，所以在rootProject里面写一次就好了。
 buildscript {
+
     repositories {
-        jcenter()
         mavenCentral()
+        jcenter()
     }
+
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.5.0'
+        classpath 'com.android.tools.build:gradle:1.5+'
         classpath 'me.tatarka:gradle-retrolambda:3.2.4'
     }
 }
@@ -38,12 +40,11 @@ allprojects {
 //            url rootProject.ext.mvnSnapshotsRepository
             url "https://jitpack.io"
         }
+
         maven {
             jcenter()
             url "https://oss.sonatype.org/content/repositories/snapshots"
         }
-
-//        maven { url "https://jitpack.io" }
     }
 
     //指定编码类型
@@ -51,6 +52,3 @@ allprojects {
         options.encoding = "UTF-8"
     }
 }
-
-//        maven { url "https://jitpack.io" }
-

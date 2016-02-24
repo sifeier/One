@@ -64,8 +64,9 @@ public class PollingService extends Service {
         Intent intent = new Intent(this, LauchActivity.class);
         PendingIntent pendingIntent = PendingIntent
                 .getActivity(this, 0, intent, PendingIntent.FLAG_ONE_SHOT);
-        mNotification.setLatestEventInfo(this, getResources().getString(R.string.app_name),
-                "Receive new message", pendingIntent);
+//        mNotification.setLatestEventInfo(this, getResources().getString(R.string.app_name),
+//                "Receive new message", pendingIntent);
+
 
         mManager.notify(0, mNotification);
     }
